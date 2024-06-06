@@ -1,6 +1,7 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.scss";
 import Home from "./components/MainContent/Home/Home";
+import VideoGameContainer from "./components/MainContent/VideoGameCards/VideoGameContainer";
 
 function App() {
   return (
@@ -13,8 +14,8 @@ function App() {
         </section>
 
         <Routes>
-          <Route path="/home" element={<Home />}></Route>
-          <Route path="/video-game"></Route>
+          <Route path="/home" element={<Home />} />
+          <Route path="/videogame" element={<VideoGameContainer />} />
         </Routes>
       </BrowserRouter>
     </>

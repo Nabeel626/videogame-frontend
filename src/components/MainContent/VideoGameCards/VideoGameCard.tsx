@@ -1,10 +1,22 @@
 import "./VideoGameCard.scss";
+import VideoGameType from "../../../types/VideoGameType";
 
-const VideoGameCard = () => {
+type VideoGameProp = {
+  videoGame: VideoGameType;
+};
+
+const VideoGameCard = ({ videoGame }: VideoGameProp) => {
   return (
-    <div className="beerCard__container">
-      <img className="beerCard__image" src={image} alt="Beer Bottle" />
-      <h2 className="beerCard__name">{name}</h2>
+    <div className="videoGameCard">
+      <img
+        className="videoGameCard__image"
+        src={"../../../../public/gameImage.avif"}
+        alt="Game Image"
+      />
+      <h3 className="videoGameCard__title--gamename">{videoGame.game_name}</h3>
+      <p className="videoGameCard__text--createdby">
+        Created By: {videoGame.created_by}
+      </p>
     </div>
   );
 };

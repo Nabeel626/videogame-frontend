@@ -1,0 +1,25 @@
+.videoGameCard {
+  background-color: pink;
+  border: 1px solid black;
+  border-radius: 20px;
+  display: block;
+  margin-left: auto;
+  text-align: center;
+  padding: 20px;
+  margin-right: auto;
+  width: 65%;
+  gap: 10px;
+
+  &__image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 20px;
+    max-width: 70%;
+    max-height: auto;
+  }
+
+  &__title--gamename {
+    padding-top: 20px;
+  }
+}
