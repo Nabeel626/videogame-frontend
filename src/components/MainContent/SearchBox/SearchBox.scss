@@ -1,0 +1,17 @@
+.search-box {
+  padding-top: 20px;
+  text-align: center;
+
+  &__label {
+    font-weight: bold;
+    background: transparent;
+  }
+
+  &__input {
+    margin-top: 10px;
+    border-radius: 20px;
+    height: 30px;
+    max-width: 200px;
+    padding: 12px;
+  }
+}

@@ -1,7 +1,8 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.scss";
 import Home from "./components/MainContent/Home/Home";
-import VideoGameContainer from "./components/MainContent/VideoGameCards/VideoGameContainer";
+import VideoGameContainer from "./components/MainContent/Containers/VideoGameContainer";
+import VideoGameFormContainer from "./components/MainContent/Containers/VideoGameFormContainer";
 
 function App() {
   return (
@@ -14,8 +15,12 @@ function App() {
         </section>
 
         <Routes>
-          <Route path="/home" element={<Home />} />
-          <Route path="/videogame" element={<VideoGameContainer />} />
+          <Route path="/videogame" element={<Home />} />
+          <Route path="/videogame/all" element={<VideoGameContainer />} />
+          <Route
+            path="/videogame/create"
+            element={<VideoGameFormContainer />}
+          />
         </Routes>
       </BrowserRouter>
     </>
