@@ -1,13 +1,18 @@
+import NavigationMenu from "../../NavigationMenu/NavigationMenu";
 import VideoGameForm from "../VideoGameForm/VideoGameForm";
 import "./VideoGameFormContainer.scss";
 
 const VideoGameFormContainer = () => {
   return (
-    <section className="VideoGameFormContainer">
-      <h2>ADD A VIDEO GAME</h2>
+    <>
+      <section className="VideoGameFormContainer">
+        <h2>ADD A VIDEO GAME</h2>
 
-      <VideoGameForm />
-    </section>
+        <VideoGameForm />
+      </section>
+
+      <NavigationMenu whichPage={"create"} />
+    </>
   );
 };
 

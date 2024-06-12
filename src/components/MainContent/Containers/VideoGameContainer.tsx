@@ -3,6 +3,7 @@ import { FormEvent, useEffect, useState } from "react";
 import VideoGameCard from "../VideoGameCards/VideoGameCard";
 import SearchBox from "../SearchBox/SearchBox";
 import "./VideoGameContainer.scss";
+import NavigationMenu from "../../NavigationMenu/NavigationMenu";
 
 const VideoGameContainer = () => {
   const [allVideoGames, setAllVideoGames] = useState<VideoGameType[]>([]);
@@ -42,6 +43,8 @@ const VideoGameContainer = () => {
           <VideoGameCard videoGame={videogame} />
         ))}
       </section>
+
+      <NavigationMenu whichPage={"showAll"} />
     </>
   );
 };
