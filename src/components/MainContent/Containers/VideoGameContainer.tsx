@@ -4,6 +4,7 @@ import VideoGameCard from "../VideoGameCards/VideoGameCard";
 import SearchBox from "../SearchBox/SearchBox";
 import "./VideoGameContainer.scss";
 import NavigationMenu from "../../NavigationMenu/NavigationMenu";
+import { Link } from "react-router-dom";
 
 const VideoGameContainer = () => {
   const [allVideoGames, setAllVideoGames] = useState<VideoGameType[]>([]);
@@ -33,14 +34,19 @@ const VideoGameContainer = () => {
   return (
     <>
       <section className="videoGameMapCards">
-        <h2 className="videoGameMapCards__title">ALL VIDEO GAMES</h2>
+        <div className="videoGameMapCards__trapezoid"></div>
+        <div className="videoGameMapCards__trapezoid2"></div>
+        <h2 className="videoGameMapCards__title">ALL VIDEO </h2>
+        <h2 className="videoGameMapCards__title2">GAMES</h2>
         <SearchBox
           label={"Search Game Name"}
           searchTerm={searchTerm}
           handleInput={handleInput}
         />
         {filteredSearch.map((videogame) => (
-          <VideoGameCard videoGame={videogame} />
+          <Link key={videogame.id} to={`/videogame/all/${videogame.id}`}>
+            <VideoGameCard videoGame={videogame} />
+          </Link>
         ))}
       </section>
 

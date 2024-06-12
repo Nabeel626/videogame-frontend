@@ -8,11 +8,11 @@ function App() {
   return (
     <>
       <BrowserRouter>
-        <section>
+        {/* <section>
           <div className="background__graphic"></div>
           <div className="background__graphic background__graphic--vector1"></div>
           <div className="background__graphic background__graphic--vector2"></div>
-        </section>
+        </section> */}
 
         <Routes>
           <Route path="/videogame" element={<Home />} />

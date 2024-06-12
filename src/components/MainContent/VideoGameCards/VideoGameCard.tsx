@@ -1,6 +1,5 @@
 import "./VideoGameCard.scss";
 import VideoGameType from "../../../types/VideoGameType";
-import { Link } from "react-router-dom";
 
 type VideoGameProp = {
   videoGame: VideoGameType;
@@ -9,19 +8,22 @@ type VideoGameProp = {
 const VideoGameCard = ({ videoGame }: VideoGameProp) => {
   return (
     <div className="videoGameCard">
-      <Link key={videoGame.id} to={`/videogame/all/${videoGame.id}`}>
-        <img
-          className="videoGameCard__image"
-          src={"/videogame/public/gamepicture.webp"}
-          alt="Game Image"
-        />
+      <img
+        className="videoGameCard__image"
+        src={
+          "/videogame/public/gameImage2.webp" ??
+          "/videogame/public/gamepicture.webp"
+        }
+        alt="Game Image"
+      />
+      <div className="videoGameCard__info--container">
         <h2 className="videoGameCard__title--gamename">
           {videoGame.game_name}
         </h2>
         <p className="videoGameCard__text--createdby">
           Created By: {videoGame.created_by}
         </p>
-      </Link>
+      </div>
     </div>
   );
 };

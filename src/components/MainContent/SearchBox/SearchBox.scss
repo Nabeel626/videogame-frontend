@@ -1,15 +1,33 @@
 .search-box {
-  padding-top: 20px;
   text-align: center;
+  color: white;
+  background: #b380ff;
+  box-shadow: 3px 5px white;
+  border: 2px solid white;
+  padding: 20px;
+  border-radius: 20px;
+  width: 60%;
+  padding-bottom: 30px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
 
   &__label {
     font-weight: bold;
-    background: transparent;
+    color: black;
+    z-index: 2;
   }
 
   &__input {
     margin-top: 10px;
     border-radius: 20px;
+    border-color: black;
+    color: black;
+    font-size: 16px;
+    box-shadow: 3px 5px black;
+    z-index: 2;
+    background: transparent;
     height: 30px;
     max-width: 200px;
     padding: 12px;

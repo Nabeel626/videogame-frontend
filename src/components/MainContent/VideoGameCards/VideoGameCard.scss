@@ -1,6 +1,7 @@
 .videoGameCard {
-  background-color: pink;
-  border: 1px solid black;
+  border: 2px solid white;
+  background: transparent;
+  // background: linear-gradient(to bottom, #ff0000 0%, #000000 100%);
   border-radius: 20px;
   display: block;
   margin-left: auto;
@@ -8,18 +9,34 @@
   margin-top: 30px;
   margin-bottom: 30px;
   text-align: center;
-  padding: 20px;
+  height: 80%;
+  background: transparent;
+  box-shadow: 5px 10px white;
   width: 65%;
   position: relative;
   top: 0;
+  z-index: 1;
 
   &__image {
-    border-radius: 20px;
-    max-width: 70%;
-    max-height: auto;
+    border-radius: 17px 17px 0 0;
+    max-width: 100%;
+    max-height: 50%;
+  }
+
+  &__info--container {
+    padding: 5px 20px 20px 20px;
   }
 
   &__title--gamename {
-    padding-top: 20px;
+    // padding-top: 20px;
+    color: white;
+    text-shadow: 0 10px 15px black;
+    background: transparent;
+  }
+
+  &__text--createdby {
+    color: white;
+    text-shadow: 0 10px 15px black;
+    background: transparent;
   }
 }

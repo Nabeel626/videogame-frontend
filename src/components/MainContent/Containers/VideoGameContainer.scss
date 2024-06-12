@@ -1,5 +1,58 @@
+@import url("https://fonts.googleapis.com/css2?family=Teko:wght@300..700&display=swap");
+
 .videoGameMapCards {
+  margin-bottom: 70px;
+  padding: 20px;
+
+  &__trapezoid {
+    position: fixed;
+    top: 0;
+    left: 0;
+    border-bottom: 380px solid #b380ff;
+    border-left: 500px solid transparent;
+    border-right: 0px solid transparent;
+    background: #944dff;
+    height: 0;
+    width: 125px;
+    z-index: 0;
+  }
+
+  &__trapezoid2 {
+    position: fixed;
+    bottom: 0;
+    right: 2.5em;
+    border-bottom: 500px solid #b380ff;
+    border-left: 420px solid transparent;
+    border-right: 0px solid transparent;
+    background: #944dff;
+    height: 0;
+    transform: scaleX(-1);
+    rotate: 90deg;
+    width: 125px;
+    z-index: 0;
+  }
+
   &__title {
+    position: fixed;
+    top: 1em;
+    left: -0em;
     text-align: center;
+    font-size: 100px;
+    color: black;
+    font-family: "Teko", sans-serif;
+    z-index: 0;
+    rotate: -38deg;
+  }
+
+  &__title2 {
+    position: fixed;
+    bottom: 1.7em;
+    right: 0.3em;
+    font-size: 100px;
+    text-align: center;
+    color: black;
+    font-family: "Teko", sans-serif;
+    z-index: 0;
+    rotate: -39deg;
   }
 }
